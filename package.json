@@ -1,0 +1,36 @@
+{
+  "name": "supertestproject",
+  "version": "1.0.0",
+  "description": "this is a framework to test API end points using supertest",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test --reporter mochawesome --timeout 600000",
+    "report": "mocha test --reporter mochawesome"
+  },
+  "author": "Nigel Bautista",
+  "license": "ISC",
+  "dependencies": {
+    "allure-commandline": "^2.9.0",
+    "assert": "^2.0.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "joi": "^14.3.1",
+    "json-schema-ref-parser": "^7.1.1",
+    "mocha-allure-reporter": "^1.4.0",
+    "mochawesome": "^4.0.1",
+    "supertest": "^4.0.2",
+    "swagger-model-validator": "^3.0.11",
+    "swagger-object-validator": "^1.2.2",
+    "swagger-spec-validator": "^3.0.1",
+    "swagger-test": "^0.7.3",
+    "yarn": "^1.17.3"
+  },
+  "devDependencies": {
+    "allure-mocha": "^2.0.0-beta.6",
+    "api-contract-validator": "^1.2.7",
+    "babel-register": "^6.26.0",
+    "chai-exclude": "^2.0.2",
+    "mocha": "^6.2.0",
+    "mocha-allure-reporter": "^1.2.0"
+  }
+}

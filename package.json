@@ -10,10 +10,12 @@
   "author": "Nigel Bautista",
   "license": "ISC",
   "dependencies": {
+    "Faker": "^0.7.2",
     "allure-commandline": "^2.9.0",
     "assert": "^2.0.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
+    "faker": "^4.1.0",
     "joi": "^14.3.1",
     "json-schema-ref-parser": "^7.1.1",
     "mocha-allure-reporter": "^1.4.0",

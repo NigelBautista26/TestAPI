@@ -4,9 +4,11 @@ const assert = require('chai').assert
 const chai = require('chai')
 const chaiExclude = require('chai-exclude')
 const politicianID = '5d968ec40f069810c26e7e9e'
+const faker = require('faker/locale/en_GB')
 
 chai.use(chaiExclude)
 
+let randomFullName = faker.name.firstName() + ' ' + faker.name.lastName()
 let response
 let politicians
 
@@ -16,7 +18,7 @@ const responseFixture = {
     "ok": true
 }
 const politicianToAdd = {
-    "name": "Boris Johnson",
+    "name": randomFullName,
     "country": "UK",
     "yob": "1968-07-26",
     "position": "Prime Minister",
@@ -38,6 +40,7 @@ class Base {
         }
 
         async addPolitician () {
+            console.log('.......................Add New Politician.......................')
             response = await this.baseUrl // Access the API...
             .post(this.APIEndpoint) // send a post request...
             .send(politicianToAdd) // JSON body...
@@ -45,8 +48,10 @@ class Base {
             this.assertStatusCodeAndContentType(201) // asserting the status code from the API response while also asserting the correct Content Type...
             expect(response.body).excluding('id').to.deep.equal(responseFixture) // to assert that the response body from the api is the same as expected, but with an exception of properties that generates random values...
             expect(response.body.id).to.be.a('string') // seperately assert the ID property that generates a random data by asserting its data type...
+            console.log(politicianToAdd)
         } 
         async listPoliticians () {
+            console.log('....................List the last 5 Politicians added.......................')
             response = await this.baseUrl // Access the API...
             .get(this.APIEndpoint) // send a post request...
             .set(headerToken) // set the header token...
@@ -58,10 +63,10 @@ class Base {
             this.assertStatusCodeAndContentType(200) // asserting the status code from the API response while also asserting the correct Content Type...
         } 
         async DisplayPoliticianInfo () {
+            console.log('............................Display a Politicians information based on ID..............................')
             response = await this.baseUrl // Access the API...
             .get(this.APIEndpointWithID) // send a post request...
             .set(headerToken) // set the header token...
-            console.log('Display a Politicians information based on ID...')
             console.log(response.body)
             this.assertStatusCodeAndContentType(200) // asserting the status code from the API response while also asserting the correct Content Type...
         }

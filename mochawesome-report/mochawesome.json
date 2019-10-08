@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2019-10-08T09:34:13.006Z",
-    "end": "2019-10-08T09:34:14.023Z",
-    "duration": 1017,
+    "start": "2019-10-08T13:40:57.117Z",
+    "end": "2019-10-08T13:40:59.288Z",
+    "duration": 2171,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f54fd887-6127-4ede-a616-6b2fbb159298",
+      "uuid": "352c3ec3-0b43-4ef3-96f0-f12b6c587f4c",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "bb18aed2-e63a-46b9-ad6e-2346276d735f",
+          "uuid": "3c6160f1-c206-43c6-bfa8-ec0a27ae49a0",
           "title": "Testing APIs...",
           "fullFile": "/Users/bautisn/Desktop/testAPI/test/e2eScenarios.js",
           "file": "/test/e2eScenarios.js",
@@ -38,7 +38,7 @@
               "title": "Add Politician",
               "fullTitle": "Testing APIs... Add Politician",
               "timedOut": false,
-              "duration": 293,
+              "duration": 808,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "await base.addPolitician()",
               "err": {},
-              "uuid": "62c100f6-9135-470d-82ff-77a542632fcc",
-              "parentUUID": "bb18aed2-e63a-46b9-ad6e-2346276d735f",
+              "uuid": "b65c3c3b-fe20-4ac0-83c0-82bb69003d78",
+              "parentUUID": "3c6160f1-c206-43c6-bfa8-ec0a27ae49a0",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Display the list of the 5 latest Politicians",
               "fullTitle": "Testing APIs... Display the list of the 5 latest Politicians",
               "timedOut": false,
-              "duration": 267,
+              "duration": 720,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "await base.listPoliticians()",
               "err": {},
-              "uuid": "14841b38-42b2-4919-bd3d-010e9766c13e",
-              "parentUUID": "bb18aed2-e63a-46b9-ad6e-2346276d735f",
+              "uuid": "58aa5c61-d7b5-42b5-b190-d1739875765e",
+              "parentUUID": "3c6160f1-c206-43c6-bfa8-ec0a27ae49a0",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Display a Politician based on his ID",
               "fullTitle": "Testing APIs... Display a Politician based on his ID",
               "timedOut": false,
-              "duration": 450,
+              "duration": 629,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "await base.DisplayPoliticianInfo()",
               "err": {},
-              "uuid": "4a8e344f-fc26-4e5b-baf8-f9e68acb3348",
-              "parentUUID": "bb18aed2-e63a-46b9-ad6e-2346276d735f",
+              "uuid": "ad6595c5-dd83-4d9c-afa3-70ab037776de",
+              "parentUUID": "3c6160f1-c206-43c6-bfa8-ec0a27ae49a0",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "62c100f6-9135-470d-82ff-77a542632fcc",
-            "14841b38-42b2-4919-bd3d-010e9766c13e",
-            "4a8e344f-fc26-4e5b-baf8-f9e68acb3348"
+            "b65c3c3b-fe20-4ac0-83c0-82bb69003d78",
+            "58aa5c61-d7b5-42b5-b190-d1739875765e",
+            "ad6595c5-dd83-4d9c-afa3-70ab037776de"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1010,
+          "duration": 2157,
           "root": false,
           "rootEmpty": false,
           "_timeout": 600000

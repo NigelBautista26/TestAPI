@@ -3,12 +3,13 @@ const expect = require('chai').expect
 const assert = require('chai').assert
 const chai = require('chai')
 const chaiExclude = require('chai-exclude')
-const politicianID = '5d968ec40f069810c26e7e9e'
+const politicianID = '5d9c99290f069811f4d568ed'
 const faker = require('faker/locale/en_GB')
 
 chai.use(chaiExclude)
 
 let randomFullName = faker.name.firstName() + ' ' + faker.name.lastName()
+let riskLevel = Math.floor(Math.random() * 6) + 1
 let response
 let politicians
 
@@ -22,7 +23,7 @@ const politicianToAdd = {
     "country": "UK",
     "yob": "1968-07-26",
     "position": "Prime Minister",
-    "risk": "HUGE"
+    "risk": riskLevel
 }
 const headerToken = {
       'Content-Type': 'application/json'
@@ -30,9 +31,9 @@ const headerToken = {
 
 class Base {
 
-        get baseUrl(){ return supertest("http://ec2-34-250-139-60.eu-west-1") }
-        get APIEndpoint(){ return ".compute.amazonaws.com/peps " }
-        get APIEndpointWithID(){ return ".compute.amazonaws.com/peps/" + politicianID }
+        get baseUrl() { return supertest("http://ec2-34-250-139-60.eu-west-1") }
+        get APIEndpoint() { return ".compute.amazonaws.com/peps " }
+        get APIEndpointWithID() { return ".compute.amazonaws.com/peps/" + politicianID }
 
         assertStatusCodeAndContentType (statusCode) {
             expect(response.status).to.equal(statusCode)

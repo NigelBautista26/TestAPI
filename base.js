@@ -9,7 +9,8 @@ const faker = require('faker/locale/en_GB')
 chai.use(chaiExclude)
 
 let randomFullName = faker.name.firstName() + ' ' + faker.name.lastName()
-let riskLevel = Math.floor(Math.random() * 6) + 1
+let riskLevel = Math.floor(Math.random() * 5) + 1
+let yob = faker.date.between('1970', '1985')
 let response
 let politicians
 
@@ -21,7 +22,7 @@ const responseFixture = {
 const politicianToAdd = {
     "name": randomFullName,
     "country": "UK",
-    "yob": "1968-07-26",
+    "yob": yob,
     "position": "Prime Minister",
     "risk": riskLevel
 }

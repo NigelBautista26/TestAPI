@@ -1,5 +1,7 @@
 # TestAPI
 
+Please find the instruction guide on how to build a uperTest API framework here: https://seleniumwithjavapython.wordpress.com/rest-api-testing/supertest/
+
 How To Run My API Test using SuperTest Framework…
 
 1. Download Node and NPM

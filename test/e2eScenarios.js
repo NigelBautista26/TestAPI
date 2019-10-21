@@ -1,4 +1,4 @@
-const base = require('../base')
+const base = require('./../pages/base')
 
   // TESTS.... 
   describe('Testing APIs...', () =>{   

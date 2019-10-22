@@ -1,16 +1,18 @@
-const base = require('./../pages/base')
+const Add = require('./../pages/addPolitician')
+const List = require('./../pages/listPoliticians')
+const Display = require('./../pages/displayPoliticianInfo')
 
   // TESTS.... 
   describe('Testing APIs...', () =>{   
 
       it('Add Politician', async ()=>{ 
-        await base.addPolitician()
+        await Add.addPolitician()
       })
       it('Display the list of the 5 latest Politicians', async ()=>{ 
-        await base.listPoliticians()
+        await List.listPoliticians()
       })
       it('Display a Politician based on his ID', async ()=>{ 
-        await base.DisplayPoliticianInfo()
+        await Display.DisplayPoliticianInfo()
       })
      
 })

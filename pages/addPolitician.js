@@ -9,7 +9,6 @@ chai.use(chaiExclude)
 let randomFullName = faker.name.firstName() + ' ' + faker.name.lastName()
 let riskLevel = Math.floor(Math.random() * 5) + 1
 let yob = faker.date.between('1970', '1985').getFullYear()
-let response
 
 const responseFixture = {
     "id": "5d966d9c0f069810bebe40b9",
@@ -31,7 +30,7 @@ class Add {
 
     async addPolitician () {
         console.log('.......................Add New Politician.......................')
-        response = await base.baseUrl // Access the API...
+        let response = await base.baseUrl // Access the API...
         .post(base.APIEndpoint) // send a post request...
         .send(politicianToAdd) // JSON body...
         .set(headerToken) // set the header token...

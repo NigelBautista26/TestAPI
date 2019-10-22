@@ -1,17 +1,14 @@
 const base = require('./../pages/base')
 const expect = require('chai').expect
 
-let response
-let politicians
-
 class List {
 
         async listPoliticians () {
             console.log('....................List the last 5 Politicians added.......................')
-            response = await base.baseUrl // Access the API...
+            let response = await base.baseUrl // Access the API...
             .get(base.APIEndpoint) // send a post request...
             // .set(headerToken) // set the header token...
-            politicians = []
+            let politicians = []
             for(let i=0; i<5; i++) {
                 politicians.push(response.body[i].createdAt)   
                 console.log(response.body[i])      

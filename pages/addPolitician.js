@@ -11,7 +11,6 @@ let riskLevel = Math.floor(Math.random() * 5) + 1
 let yob = faker.date.between('1970', '1985').getFullYear()
 
 const responseFixture = {
-    "id": "5d966d9c0f069810bebe40b9",
     "message": "Entity created successfully!",
     "ok": true
 }

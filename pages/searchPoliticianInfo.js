@@ -12,6 +12,7 @@ class Search {
             console.log(response.body)
             expect(response.status).to.equal(200) // asserting the status code from the API response while also asserting the correct Content Type...
             expect(response.body).excluding('id').to.deep.equal(searchPoliticianData)
+            expect(response.header["content-type"]).to.equal('application/json') // asserts the response content type...
         }
 
     }

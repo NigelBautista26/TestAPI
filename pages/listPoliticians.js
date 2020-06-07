@@ -12,6 +12,7 @@ class List {
                 politicians.push(response.body[i].createdAt)   
                 console.log(response.body[i])      
             }
+            expect(response.header["content-type"]).to.equal('application/json') // asserts the response content type...
             expect(response.status).to.equal(200) // asserting the status code from the API response while also asserting the correct Content Type...
         } 
 

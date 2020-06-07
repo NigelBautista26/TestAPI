@@ -7,25 +7,14 @@ const responseSchema = require('./../schemas/addPoliticianResponse.json')
 const addPoliticianData = require('./../fixtures/addPoliticianData.json')
 
 chai.use(chaiExclude)
-// let randomFullName = faker.name.firstName() + ' ' + faker.name.lastName()
-// let riskLevel = Math.floor(Math.random() * 5) + 1
-// let yob = faker.date.between('1970', '1985').getFullYear()
-
-// const politicianToAdd = {
-//     "name": randomFullName,
-//     "country": "UK",
-//     "yob": yob,
-//     "position": "Prime Minister",
-//     "risk": riskLevel
-// }
 
 class Add {
 
     async addPolitician () {
         console.log('.......................Add New Politician.......................')
         let response = await base.baseUrl // Access the API...
-        .post(base.apiEndpoint) // send a post request...
-        .send(addPoliticianData) // JSON body...
+        .post(base.apiEndpoint) // send a post request...      
+        .send(addPoliticianData[Math.floor(Math.random() * addPoliticianData.length)]) // JSON body...
         // .set(headerToken) // set the header token if needed...
         console.log(response.body)
         expect(response.status).to.equal(201)  // asserting the status code from the API response while also asserting the correct Content Type...

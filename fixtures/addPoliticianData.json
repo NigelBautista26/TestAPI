@@ -1,7 +1,48 @@
-{
-    "name": "Nigel Bautista",
-    "country": "UK",
-    "yob": "April 26, 1988",
-    "position": "Prime Minister",
-    "risk": "High"
-}
+[
+    {
+        "country": "UK",
+        "createdAt": "2020-06-07T21:30:53.040630",
+        "id": "5edd5c8d0f069830e651e521",
+        "name": "Boris Johnson",
+        "position": "Prime Minister",
+        "risk": "High",
+        "yob": "January 26, 1970"
+    },
+    {
+        "country": "New Zealand",
+        "createdAt": "2020-06-07T21:30:29.832238",
+        "id": "5edd5c750f069830e651e520",
+        "name": "Jacinda Adern",
+        "position": "Prime Minister",
+        "risk": "Medium",
+        "yob": "June 19, 1975"
+    },
+    {
+        "country": "China",
+        "createdAt": "2020-06-07T21:30:29.832238",
+        "id": "5edd5c750f069830e651e520",
+        "name": "Xi Jinping",
+        "position": "President",
+        "risk": "High",
+        "yob": "May 1, 1968"
+    },
+    {
+        "country": "Philippines",
+        "createdAt": "2020-06-07T21:30:29.832238",
+        "id": "5edd5c750f069830e651e520",
+        "name": "Duterte",
+        "position": "President",
+        "risk": "High",
+        "yob": "May 1, 1968"
+    },
+    {
+        "country": "Germany",
+        "createdAt": "2020-06-07T21:30:29.832238",
+        "id": "5edd5c750f069830e651e520",
+        "name": "Angela Merkel",
+        "position": "Chancellor",
+        "risk": "low",
+        "yob": "May 1, 1975"
+    }
+]
+

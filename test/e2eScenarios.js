@@ -14,5 +14,4 @@ const search = require('./../pages/searchPoliticianInfo')
       it('search a Politician based on his ID', async ()=>{ 
         await search.searchPoliticianInfo()
       })
-     
 })

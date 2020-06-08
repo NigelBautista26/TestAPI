@@ -2,8 +2,7 @@ const base = require('./../pages/base')
 const expect = require('chai').expect
 const chai = require('chai')
 const chaiExclude = require('chai-exclude')
-// const faker = require('faker/locale/en_GB')
-const responseSchema = require('./../schemas/addPoliticianResponse.json')
+const addPoliticianResponseSchema = require('./../schemas/addPoliticianResponse.json')
 const addPoliticianData = require('./../fixtures/addPoliticianData.json')
 
 chai.use(chaiExclude)
@@ -18,7 +17,7 @@ class Add {
         console.log(response.body)
         expect(response.status).to.equal(201)  // asserting the status code from the API response while also asserting the correct Content Type...
         expect(response.header["content-type"]).to.equal('application/json') // asserts the response content type...
-        expect(response.body).excluding('id').to.deep.equal(responseSchema) // to assert that the response body from the api is the same as expected, but with an exception of properties that generates random values...
+        expect(response.body).excluding('id').to.deep.equal(addPoliticianResponseSchema) // to assert that the response body from the api is the same as expected, but with an exception of properties that generates random values...
         expect(response.body.id).to.be.a('string') // seperately assert the ID property that generates a random data by asserting its data type...
     } 
 

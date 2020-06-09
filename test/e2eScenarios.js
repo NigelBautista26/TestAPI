@@ -1,6 +1,6 @@
-const add = require('./../pages/addPolitician')
-const list = require('./../pages/listPoliticians')
-const search = require('./../pages/searchPoliticianInfo')
+const add = require('../integration/addPolitician')
+const list = require('../integration/listPoliticians')
+const search = require('../integration/searchPoliticianInfo')
 
   // TESTS.... 
   describe('Testing APIs...', () =>{   

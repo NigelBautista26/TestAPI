@@ -1,9 +1,9 @@
-const base = require('./../pages/base')
+const base = require('./base')
 const expect = require('chai').expect
 const chai = require('chai')
 const chaiExclude = require('chai-exclude')
-const addPoliticianResponseSchema = require('./../schemas/addPoliticianResponse.json')
-const addPoliticianData = require('./../fixtures/addPoliticianData.json')
+const addPoliticianResponseSchema = require('../schemas/addPoliticianResponse.json')
+const addPoliticianData = require('../fixtures/addPoliticianData.json')
 
 chai.use(chaiExclude)
 

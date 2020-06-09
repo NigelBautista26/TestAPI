@@ -1,4 +1,4 @@
-const base = require('./../pages/base')
+const base = require('./base')
 const expect = require('chai').expect
 
 class List {
